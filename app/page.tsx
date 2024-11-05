@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Greet } from "./components/greet";
+import { Counter } from "./components/counter";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
           />
         )}
         <Greet />
+        <Counter />
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">
             Get started by editing{" "}
