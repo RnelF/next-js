@@ -29,6 +29,14 @@ export const Navigation = () => {
       >
         Product 1
       </Link>
+      <Link
+        href="/mock-users"
+        className={
+          pathname === "/mock-users" ? "font-bold mr-4" : "text-blue-500 mr-4"
+        }
+      >
+        Users
+      </Link>
       <SignedOut>
         <SignInButton mode="modal" />
       </SignedOut>
