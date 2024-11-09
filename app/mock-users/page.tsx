@@ -1,10 +1,17 @@
+import { auth, currentUser } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache"; //usefull for form submissions doesn't need to refresh the page to render new submissions
+
 type MockUser = {
   id: number;
   name: string;
 };
 
 export default async function MockUsers() {
+  const authObj = await auth();
+  const userObj = await currentUser();
+
+  console.log(authObj, userObj);
+
   const res = await fetch("https://672cac311600dda5a9f96ab1.mockapi.io/users");
 
   const users = await res.json();
